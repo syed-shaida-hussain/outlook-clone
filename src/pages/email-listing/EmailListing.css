@@ -1,8 +1,13 @@
-.email-container {
-    padding: 3rem;
-    gap: 20px;
+.email-wrapper {
+    padding: 1rem 2rem;
+    gap: 14px;
     font-size: 14px;
     color: var(--text-color);
+}
+
+.email-container {
+    gap: 14px;
+    min-width: 40%;
 }
 
 .single-email {
@@ -15,7 +20,7 @@
 
 .avatar {
     height: 2.5rem;
-    width: 2.5rem;
+    min-width: 2.5rem;
     border-radius: 50%;
     background-color: var(--accent-color);
     color: var(--read-bg-color);
@@ -26,17 +31,84 @@
     line-height: 1.1rem;
 }
 
-@media screen and (max-width : 650px) {
-    .avatar {
-        height: 2rem;
-        width: 2rem;
+.email-description p,
+.email-description div {
+    margin-bottom: 1rem;
+}
+
+.email-body {
+    border: 1.5px solid var(--border-color);
+    padding: 20px 40px 20px 20px;
+    background: white;
+    height: fit-content;
+    border-radius: 0.5rem;
+    width: 60%;
+    line-height: 1.2rem;
+    color: var(--text-color);
+    gap: 14px;
+}
+
+.filters {
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.filters button {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+.active-btn {
+    background-color: var(--filter-color);
+    color: var(--text-color);
+}
+
+.btn {
+    background-color: var(--accent-color);
+    color: var(--read-bg-color);
+    padding: 0.5rem 0.8rem;
+    cursor: pointer;
+    border-radius: 1rem;
+    font-size: 11px;
+}
+
+.filters button:hover {
+    background-color: var(--filter-color);
+    color: var(--text-color);
+    border-radius: 1rem;
+}
+
+.single-email:hover {
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: var(--filter-color);
+}
+
+.active-email {
+    border: 1.5px solid var(--accent-color);
+}
+
+@media screen and (max-width : 1300px) {
+    .email-container {
+        min-width: 40%;
     }
 }
 
-@media screen and (max-width : 550px) {
-    .email-container {
+@media screen and (max-width : 1000px) {
+
+    .email-body {
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .email-wrapper {
         padding: 1rem;
-        font-size: 12px;
+        gap: 10px;
+        font-size: 13px;
+        line-height: 1.1rem;
     }
 
     .single-email {
@@ -44,10 +116,44 @@
     }
 }
 
+@media screen and (max-width : 650px) {
+    .avatar {
+        height: 1.5rem;
+        min-width: 1.5rem;
+    }
+
+    .email-container {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width : 550px) {
+    .email-container {
+        padding: 0.5rem;
+        font-size: 10px;
+    }
+
+    .single-email {
+        gap: 0.5rem;
+    }
+
+    .email-wrapper {
+        padding: 0.5rem;
+        font-size: 10px;
+    }
+
+    .btn{
+        font-size: 10px;
+        padding: 0.3rem 0.5rem;
+
+    }
+}
+
 @media screen and (max-width : 450px) {
     .email-container {
         padding: 0.5rem;
         font-size: 11px;
+        min-width: 50%;
     }
 
     .single-email {
