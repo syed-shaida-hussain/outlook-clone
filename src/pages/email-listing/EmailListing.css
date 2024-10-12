@@ -1,0 +1,62 @@
+.email-container {
+    padding: 3rem;
+    gap: 20px;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+.single-email {
+    border: 1.5px solid var(--border-color);
+    gap: 1rem;
+    padding: 15px 20px;
+    border-radius: 0.5rem;
+    background: white;
+}
+
+.avatar {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    color: var(--read-bg-color);
+    font-weight: 550;
+}
+
+.email-desc {
+    line-height: 1.1rem;
+}
+
+@media screen and (max-width : 650px) {
+    .avatar {
+        height: 2rem;
+        width: 2rem;
+    }
+}
+
+@media screen and (max-width : 550px) {
+    .email-container {
+        padding: 1rem;
+        font-size: 12px;
+    }
+
+    .single-email {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width : 450px) {
+    .email-container {
+        padding: 0.5rem;
+        font-size: 11px;
+    }
+
+    .single-email {
+        gap: 0.5rem;
+    }
+}
+
+@media screen and (max-width : 400px) {
+    .email-container {
+        padding: 0.5rem;
+    }
+}

@@ -1,0 +1,52 @@
+:root{
+  --border-color : #CFD2DC;
+  --accent-color : #E54065;
+  --bg-color : #F4F5F9;
+  --text-color: #636363;
+  --filter-color : #E1E4EA;
+  --read-bg-color : #F2F2F2;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  background-color: var(--bg-color);
+}
+
+/* Removing default CSS */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+.flex{
+  display: flex;
+}
+
+.flex-col{
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-ctr{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gap-5{
+  gap: 5px;
+}
+
+.gap-10{
+  gap: 10px;
+}
+
+.highlighted{
+  font-weight: 550;
+  color: #626262;
+}
