@@ -1,10 +1,9 @@
 import './App.css'
+import { AllRoutes } from './components/Routes'
 
 function App() {
-
   return (
-    <>
-    </>
+      <AllRoutes />
   )
 }
 
