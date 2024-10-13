@@ -79,3 +79,11 @@ body{
 .cta-color{
   color: var(--accent-color);
 }
+
+.h-80{
+  height: 80vh;
+}
+
+.w-40{
+  min-width: 40%;
+}

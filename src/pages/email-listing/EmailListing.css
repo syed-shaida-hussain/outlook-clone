@@ -64,6 +64,10 @@
     color: var(--text-color);
 }
 
+.read{
+    background-color: var(--read-bg-color);
+}
+
 .btn {
     background-color: var(--accent-color);
     color: var(--read-bg-color);
@@ -71,12 +75,6 @@
     cursor: pointer;
     border-radius: 1rem;
     font-size: 11px;
-}
-
-.filters button:hover {
-    background-color: var(--filter-color);
-    color: var(--text-color);
-    border-radius: 1rem;
 }
 
 .single-email:hover {
