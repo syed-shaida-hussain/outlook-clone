@@ -153,6 +153,10 @@
     .email-body{
         width: 100%;
     }
+
+    .filters button {
+        padding: 0.4rem 0.7rem;
+    }
 }
 
 @media screen and (max-width : 550px) {
