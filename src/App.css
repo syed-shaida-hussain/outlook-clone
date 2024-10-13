@@ -75,3 +75,7 @@ body{
 .break-line{
   word-break: break-all;
 }
+
+.cta-color{
+  color: var(--accent-color);
+}
