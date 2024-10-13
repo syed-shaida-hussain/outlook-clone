@@ -6,14 +6,16 @@ import { useEmails } from "../../contexts/EmailContext"
 import EmailCard from "../../components/EmailCard"
 import Filters from "../../components/Filters"
 import SingleEmail from "../../components/SingleEmail"
+import Pagination from "../../components/Pagination"
 
 
 export const EmailListing = () => {
     const {dispatchEmail, emailState : { emails, emailBody, singleEmail }, filterData} = useEmails();
+    const [pageNumber , setPageNumber] = useState(1)
+    const {showFavouritesOnly , showReadOnly, showUnreadOnly} = filterData;
 
-    const {showFavouritesOnly , showReadOnly, showUnreadOnly} = filterData
     const fetchEmails = async () => {
-        const {data} = await axios.get("https://flipkart-email-mock.now.sh/")
+        const {data} = await axios.get(`https://flipkart-email-mock.now.sh/?page=${pageNumber}`)
         dispatchEmail({type : "GET_ALL_EMAILS", payload : data.list })
     }
 
@@ -38,7 +40,7 @@ export const EmailListing = () => {
 
     useEffect(() => {
         fetchEmails()
-    },[])
+    },[pageNumber])
 
   return (
     <div className="email-wrapper">
@@ -49,10 +51,11 @@ export const EmailListing = () => {
                 <EmailCard email={email} emailBody = {emailBody} />
             </li>)}
         </ul> : <h2 className="flex-ctr h-80 cta-color highlighted w-40 ">
-            No emails here.
+            No emails here...
         </h2>}
         {emailBody && <SingleEmail singleEmail={singleEmail} emailBody={emailBody} />}
     </section>
+    <Pagination pageNumber={pageNumber} setPageNumber={setPageNumber} />
     </div>
   )
 }

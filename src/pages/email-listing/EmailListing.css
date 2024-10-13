@@ -57,6 +57,7 @@
     padding: 0.5rem 1rem;
     cursor: pointer;
     border-radius: 1rem;
+    color: var(--text-color);
 }
 
 .active-btn {
@@ -75,6 +76,26 @@
     cursor: pointer;
     border-radius: 1rem;
     font-size: 11px;
+}
+
+.pagination{
+    height: 5rem;
+    margin: 1rem 0;
+}
+
+.pagination-btn{
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background-color: var(--accent-color);
+    color: var(--read-bg-color);
+    cursor: pointer;
+}
+
+.pagination-btn:disabled{
+    background-color: var(--text-color);
+    color: rgb(222, 221, 221);
+    cursor: not-allowed;
 }
 
 .single-email:hover {
