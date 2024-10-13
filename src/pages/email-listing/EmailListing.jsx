@@ -16,7 +16,6 @@ export const EmailListing = () => {
 
     const fetchEmail = async (email) => {
         const {data} = await axios.get(`https://flipkart-email-mock.now.sh/?id=${email?.id}`)
-        console.log(data)
         dispatchEmail({type:"GET_EMAIL_BODY" , payload : {body : data , email}})
     }
     useEffect(() => {
@@ -25,7 +24,7 @@ export const EmailListing = () => {
   return (
     <div className="email-wrapper">
     <Filters />
-    <section style={!emailBody ? {display : "block"} : {display : "flex" , gap : "15px"}}>
+    <section style={!emailBody ? {display : "block"} : {display : "flex" , gap : "10px"}}>
         <ul className="email-container flex-col">
             {emails.map((email) => <li key={email.id} onClick={() => fetchEmail(email)}>
                 <EmailCard email={email} emailBody = {emailBody} />

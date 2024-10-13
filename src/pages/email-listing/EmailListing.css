@@ -125,6 +125,15 @@
     .email-container {
         font-size: 11px;
     }
+
+    .btn{
+        font-size: 10px;
+        padding: 0.3rem 0.5rem;
+    }
+
+    .email-body{
+        width: 100%;
+    }
 }
 
 @media screen and (max-width : 550px) {
@@ -141,28 +150,32 @@
         padding: 0.5rem;
         font-size: 10px;
     }
-
-    .btn{
-        font-size: 10px;
-        padding: 0.3rem 0.5rem;
-
-    }
 }
 
 @media screen and (max-width : 450px) {
     .email-container {
-        padding: 0.5rem;
+        padding: 0rem;
         font-size: 11px;
         min-width: 50%;
+    }
+
+    .avatar {
+        height: 1rem;
+        min-width: 1rem;
     }
 
     .single-email {
         gap: 0.5rem;
     }
+
+    .email-body{
+        padding: 10px;
+    }
+
+
 }
 
 @media screen and (max-width : 400px) {
     .email-container {
-        padding: 0.5rem;
     }
 }

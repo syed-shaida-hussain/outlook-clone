@@ -71,3 +71,7 @@ body{
   font-weight: 550;
   color: #626262;
 }
+
+.break-line{
+  word-break: break-all;
+}

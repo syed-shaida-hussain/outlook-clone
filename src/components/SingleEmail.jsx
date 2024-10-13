@@ -5,7 +5,7 @@ const SingleEmail = ({singleEmail,emailBody}) => {
   return (
     <section className=" email-body flex gap-20">
             <div className="flex-ctr avatar">{singleEmail?.from?.name.slice()[0]?.toUpperCase()}</div>
-            <div className="flex-col gap-20">
+            <div className="flex-col gap-10">
                 <div className="flex sp-bw align-start">
                     <span className="highlighted">{singleEmail?.subject}</span>
                     <button className="btn">Mark as Favourite</button>
